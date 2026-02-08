@@ -35,5 +35,3 @@ Frontend Developer with **+2 years of experience** building modern, performant w
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/axl-eduardo-guillen-luna-b63541279/)
 
 </div>
-
-<img src="https://capsule-render.vercel.app/api?type=shark&color=141321&height=80&section=footer" width="100%" />
