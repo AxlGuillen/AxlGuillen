@@ -1,50 +1,212 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
-  <title>Axl Guillén — a frontend dev building quietly in Morelia</title>
-  <rect width="720" height="460" fill="#0d1117"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1300" width="720" height="1300">
+  <title>Axl Guillén — frontend dev building quietly in Morelia</title>
 
-  <!-- Wordmark -->
-  <text
-    x="40" y="84"
-    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+  <!-- Background -->
+  <rect width="720" height="1300" fill="#0d1117"/>
+
+  <!-- ─── WORDMARK ─── -->
+  <text x="40" y="84"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
     font-size="11" fill="#7d8590" letter-spacing="4">AX · 26</text>
 
-  <!-- Headline line 1 -->
-  <text
-    x="40" y="176"
-    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+  <!-- ─── HEADLINE ─── -->
+  <text x="40" y="176"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
     font-size="38" font-weight="500" letter-spacing="-1">
     <tspan fill="#9198a1">I&#39;m </tspan><tspan fill="#f0f6fc">Axl,</tspan>
   </text>
-
-  <!-- Headline line 2 -->
-  <text
-    x="40" y="222"
-    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+  <text x="40" y="222"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
     font-size="38" font-weight="500" fill="#f0f6fc" letter-spacing="-1">a frontend dev</text>
-
-  <!-- Headline line 3 -->
-  <text
-    x="40" y="268"
-    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+  <text x="40" y="268"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
     font-size="38" font-weight="500" letter-spacing="-1">
     <tspan fill="#9198a1">building </tspan><tspan fill="#f0f6fc">quietly</tspan>
   </text>
-
-  <!-- Headline line 4 -->
-  <text
-    x="40" y="314"
-    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+  <text x="40" y="314"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
     font-size="38" font-weight="500" letter-spacing="-1">
     <tspan fill="#9198a1">in </tspan><tspan fill="#4493f7">Morelia</tspan><tspan fill="#9198a1">.</tspan>
   </text>
 
-  <!-- Tagline -->
-  <text
-    x="40" y="370"
-    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+  <!-- ─── TAGLINE ─── -->
+  <text x="40" y="370"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
     font-size="13" fill="#9198a1">Two years writing TypeScript for the web. I care about code that</text>
-  <text
-    x="40" y="392"
-    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+  <text x="40" y="392"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
     font-size="13" fill="#9198a1">reads like prose and interfaces that disappear into use.</text>
+
+  <!-- ─── SECTION 01 · FACTS ─── -->
+  <text x="40" y="460"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="11" fill="#7d8590" letter-spacing="3">01</text>
+  <text x="69" y="460"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="11" fill="#9198a1" letter-spacing="3">FACTS</text>
+  <line x1="128" y1="455" x2="680" y2="455" stroke="#262c36" stroke-width="1"/>
+
+  <!-- Row: based -->
+  <text x="40" y="502"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">based</text>
+  <text x="204" y="502"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#f0f6fc">Morelia, Michoacán — MX</text>
+  <line x1="40" y1="518" x2="680" y2="518" stroke="#262c36" stroke-width="1"/>
+
+  <!-- Row: study -->
+  <text x="40" y="540"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">study</text>
+  <text x="204" y="540"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#f0f6fc">Tec. de Morelia</text>
+  <line x1="40" y1="555" x2="680" y2="555" stroke="#262c36" stroke-width="1"/>
+
+  <!-- Row: speaks -->
+  <text x="40" y="577"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">speaks</text>
+  <text x="204" y="577"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#f0f6fc">español (native), english (B1)</text>
+  <line x1="40" y1="592" x2="680" y2="592" stroke="#262c36" stroke-width="1"/>
+
+  <!-- Row: now -->
+  <text x="40" y="614"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">now</text>
+  <text x="204" y="614"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13">
+    <tspan fill="#f0f6fc">frontend at work, </tspan><tspan fill="#9198a1">// </tspan><tspan fill="#f0f6fc">AI &amp; algorithms after hours</tspan>
+  </text>
+  <line x1="40" y1="629" x2="680" y2="629" stroke="#262c36" stroke-width="1"/>
+
+  <!-- Row: status -->
+  <text x="40" y="651"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">status</text>
+  <text x="204" y="651"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13">
+    <tspan fill="#3fb950">●</tspan><tspan fill="#f0f6fc"> open to interesting things</tspan>
+  </text>
+  <line x1="40" y1="666" x2="680" y2="666" stroke="#262c36" stroke-width="1"/>
+
+  <!-- ─── SECTION 02 · STACK ─── -->
+  <text x="40" y="730"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="11" fill="#7d8590" letter-spacing="3">02</text>
+  <text x="69" y="730"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="11" fill="#9198a1" letter-spacing="3">STACK</text>
+  <line x1="128" y1="725" x2="680" y2="725" stroke="#262c36" stroke-width="1"/>
+
+  <!-- Stack code block -->
+  <text x="40" y="761"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">const stack = &#123;</text>
+
+  <text y="785"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13">
+    <tspan x="56" fill="#9198a1">language:</tspan>
+    <tspan x="143" fill="#f0f6fc">[</tspan><tspan fill="#4493f7">"typescript"</tspan><tspan fill="#f0f6fc">, </tspan><tspan fill="#4493f7">"javascript"</tspan><tspan fill="#f0f6fc">],</tspan>
+  </text>
+
+  <text y="809"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13">
+    <tspan x="56" fill="#9198a1">frameworks:</tspan>
+    <tspan x="143" fill="#f0f6fc">[</tspan><tspan fill="#4493f7">"next"</tspan><tspan fill="#f0f6fc">, </tspan><tspan fill="#4493f7">"vue"</tspan><tspan fill="#f0f6fc">, </tspan><tspan fill="#4493f7">"astro"</tspan><tspan fill="#f0f6fc">, </tspan><tspan fill="#4493f7">"react"</tspan><tspan fill="#f0f6fc">],</tspan>
+  </text>
+
+  <text y="833"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13">
+    <tspan x="56" fill="#9198a1">styling:</tspan>
+    <tspan x="143" fill="#f0f6fc">[</tspan><tspan fill="#4493f7">"tailwind"</tspan><tspan fill="#f0f6fc">, </tspan><tspan fill="#4493f7">"css"</tspan><tspan fill="#f0f6fc">, </tspan><tspan fill="#4493f7">"motion"</tspan><tspan fill="#f0f6fc">],</tspan>
+  </text>
+
+  <text y="857"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13">
+    <tspan x="56" fill="#9198a1">tools:</tspan>
+    <tspan x="143" fill="#f0f6fc">[</tspan><tspan fill="#4493f7">"figma"</tspan><tspan fill="#f0f6fc">, </tspan><tspan fill="#4493f7">"git"</tspan><tspan fill="#f0f6fc">, </tspan><tspan fill="#4493f7">"node"</tspan><tspan fill="#f0f6fc">],</tspan>
+  </text>
+
+  <text y="881"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13">
+    <tspan x="56" fill="#9198a1">learning:</tspan>
+    <tspan x="143" fill="#f0f6fc">[</tspan><tspan fill="#4493f7">"ai"</tspan><tspan fill="#f0f6fc">, </tspan><tspan fill="#4493f7">"algorithms"</tspan><tspan fill="#f0f6fc">, </tspan><tspan fill="#4493f7">"systems"</tspan><tspan fill="#f0f6fc">],</tspan>
+  </text>
+
+  <text x="40" y="905"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">&#125;;</text>
+
+  <!-- ─── SECTION 03 · ELSEWHERE ─── -->
+  <text x="40" y="973"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="11" fill="#7d8590" letter-spacing="3">03</text>
+  <text x="69" y="973"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="11" fill="#9198a1" letter-spacing="3">ELSEWHERE</text>
+  <line x1="165" y1="968" x2="680" y2="968" stroke="#262c36" stroke-width="1"/>
+
+  <!-- Row: portfolio -->
+  <text x="40" y="1018"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">portfolio</text>
+  <text x="136" y="1018"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#4493f7">axl13.dev</text>
+  <text x="680" y="1018" text-anchor="end"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">↗</text>
+  <line x1="40" y1="1035" x2="680" y2="1035" stroke="#262c36" stroke-width="1"/>
+
+  <!-- Row: linkedin -->
+  <text x="40" y="1059"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">linkedin</text>
+  <text x="136" y="1059"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#4493f7">in/axl-eduardo-guillen-luna</text>
+  <text x="680" y="1059" text-anchor="end"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">↗</text>
+  <line x1="40" y1="1076" x2="680" y2="1076" stroke="#262c36" stroke-width="1"/>
+
+  <!-- Row: github -->
+  <text x="40" y="1100"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">github</text>
+  <text x="136" y="1100"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#4493f7">@AxlGuillen</text>
+  <text x="680" y="1100" text-anchor="end"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">↗</text>
+  <line x1="40" y1="1117" x2="680" y2="1117" stroke="#262c36" stroke-width="1"/>
+
+  <!-- Row: email -->
+  <text x="40" y="1141"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">email</text>
+  <text x="136" y="1141"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#4493f7">hi@axl13.dev</text>
+  <text x="680" y="1141" text-anchor="end"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="13" fill="#9198a1">↗</text>
+  <line x1="40" y1="1158" x2="680" y2="1158" stroke="#262c36" stroke-width="1"/>
+
+  <!-- ─── FOOTER ─── -->
+  <text x="360" y="1229" text-anchor="middle"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="10" fill="#3d444d" letter-spacing="3">— END OF FILE —</text>
 </svg>
