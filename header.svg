@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <title>Axl Guillén — a frontend dev building quietly in Morelia</title>
+  <rect width="720" height="460" fill="#0d1117"/>
+
+  <!-- Wordmark -->
+  <text
+    x="40" y="84"
+    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+    font-size="11" fill="#7d8590" letter-spacing="4">AX · 26</text>
+
+  <!-- Headline line 1 -->
+  <text
+    x="40" y="176"
+    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+    font-size="38" font-weight="500" letter-spacing="-1">
+    <tspan fill="#9198a1">I&#39;m </tspan><tspan fill="#f0f6fc">Axl,</tspan>
+  </text>
+
+  <!-- Headline line 2 -->
+  <text
+    x="40" y="222"
+    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+    font-size="38" font-weight="500" fill="#f0f6fc" letter-spacing="-1">a frontend dev</text>
+
+  <!-- Headline line 3 -->
+  <text
+    x="40" y="268"
+    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+    font-size="38" font-weight="500" letter-spacing="-1">
+    <tspan fill="#9198a1">building </tspan><tspan fill="#f0f6fc">quietly</tspan>
+  </text>
+
+  <!-- Headline line 4 -->
+  <text
+    x="40" y="314"
+    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+    font-size="38" font-weight="500" letter-spacing="-1">
+    <tspan fill="#9198a1">in </tspan><tspan fill="#4493f7">Morelia</tspan><tspan fill="#9198a1">.</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text
+    x="40" y="370"
+    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+    font-size="13" fill="#9198a1">Two years writing TypeScript for the web. I care about code that</text>
+  <text
+    x="40" y="392"
+    font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+    font-size="13" fill="#9198a1">reads like prose and interfaces that disappear into use.</text>
+</svg>

@@ -1,37 +1,43 @@
-<div align="center">
+<img src="header.svg" width="720" alt="Axl Guillén · a frontend dev building quietly in Morelia" />
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=70A5FD&center=true&vCenter=true&random=false&width=520&lines=Building+modern+web+experiences;TypeScript+%7C+Next.js+%7C+Vue+%7C+Astro;%2B2+years+crafting+user+interfaces)](https://git.io/typing-svg)
+<br />
+<br />
 
-</div>
+`01 · facts`
 
----
+| | |
+|:--|:--|
+| `based` | Morelia, Michoacán — MX |
+| `study` | Tec. de Morelia |
+| `speaks` | español (native), english (B1) |
+| `now` | frontend at work, `//` AI & algorithms after hours |
+| `status` | 🟢 open to interesting things |
 
-### `> whoami`
+<br />
 
-Frontend Developer with **+2 years of experience** building modern, performant web applications. I focus on writing clean, maintainable code and delivering great user experiences.
+`02 · stack`
 
-- Based in Morelia, Michoacan, Mexico
-- Graduated from Tecnologico de Morelia
-- Spanish (native) | English (B1)
-- Currently exploring AI & algorithms to sharpen problem-solving skills
+```ts
+const stack = {
+  language:   ["typescript", "javascript"],
+  frameworks: ["next", "vue", "astro", "react"],
+  styling:    ["tailwind", "css", "motion"],
+  tools:      ["figma", "git", "node"],
+  learning:   ["ai", "algorithms", "systems"],
+};
+```
 
----
+<br />
 
-### `> stack`
+`03 · elsewhere`
 
-<div align="center">
+| | |
+|:--|:--|
+| `portfolio` | [axl13.dev](https://axl13.dev) ↗ |
+| `linkedin` | [in/axl-eduardo-guillen-luna](https://www.linkedin.com/in/axl-eduardo-guillen-luna-b63541279/) ↗ |
+| `github` | [@AxlGuillen](https://github.com/AxlGuillen) ↗ |
+| `email` | [hi@axl13.dev](mailto:hi@axl13.dev) ↗ |
 
-[![My Skills](https://skillicons.dev/icons?i=ts,nextjs,vue,astro&theme=dark)](https://skillicons.dev)
+<br />
 
-</div>
-
----
-
-### `> connect`
-
-<div align="center">
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-axl13.dev-70a5fd?style=for-the-badge&logo=googlechrome&logoColor=white)](https://axl13.dev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/axl-eduardo-guillen-luna-b63541279/)
-
-</div>
+<div align="center"><sub><code>— END OF FILE —</code></sub></div>
