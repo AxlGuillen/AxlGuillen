@@ -1,0 +1,54 @@
+name: Redraw profile
+
+on:
+  schedule:
+    # 13:00 UTC ≈ 7 am in Morelia (CST). Once a day is plenty: GitHub
+    # caches README images for a good while anyway.
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+# Deliberately no `push` trigger. This workflow commits back to main, so
+# running it on push means every push you make spawns a bot commit on top
+# of it, and your next push is rejected until you pull. Regenerate locally
+# with `node scripts/build-terminal.mjs`, or run this by hand from the
+# Actions tab.
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Animated terminal
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build the terminal
+        # To make the numbers include work in private repos:
+        #   1. create a classic PAT with the `read:user` scope
+        #   2. store it as a repository secret named PROFILE_TOKEN
+        #   3. turn on Settings → Profile → "Include private contributions"
+        # Without PROFILE_TOKEN this still works, but counts public only.
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+        run: node scripts/build-terminal.mjs
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Redraw profile"
+            git push
+          fi
