@@ -507,25 +507,41 @@ class Session {
       );
     }
 
-    // A meteor across the strip of sky above the window: a brief streak
-    // every 16 s, gone before it can touch the glass.
-    this.defs.push(
-      `<linearGradient id="tail" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="-64" y2="-6">` +
-        `<stop offset="0" stop-color="${scene.star}" stop-opacity="0.9"/>` +
-        `<stop offset="1" stop-color="${scene.star}" stop-opacity="0"/></linearGradient>`,
-    );
-    bg.push(
-      `<g opacity="0">` +
-        `<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6;0.63;0.68;0.71;1" ` +
-        `dur="16s" repeatCount="indefinite"/>` +
-        `<g>` +
-        `<animateTransform attributeName="transform" type="translate" ` +
-        `values="${n(W * 0.28)} 8;${n(W * 0.28)} 8;${n(W * 0.62)} 34;${n(W * 0.62)} 34" ` +
-        `keyTimes="0;0.6;0.71;1" dur="16s" repeatCount="indefinite"/>` +
-        `<line x1="0" y1="0" x2="-64" y2="-6" stroke="url(#tail)" stroke-width="1.5" stroke-linecap="round"/>` +
-        `<circle r="1.6" fill="${scene.star}"/>` +
-        `</g></g>`,
-    );
+    // Meteors across the strip of sky above the window: brief streaks on
+    // staggered cycles, gone before they can touch the glass. `at` is the
+    // point in the cycle where each one fires.
+    const meteors = [
+      { dur: 16, from: [W * 0.28, 8], to: [W * 0.62, 34], at: 0.6 },
+      { dur: 23, from: [W * 0.82, 6], to: [W * 0.54, 30], at: 0.22 },
+      { dur: 29, from: [W * 0.06, 18], to: [W * 0.3, 38], at: 0.8 },
+    ];
+    meteors.forEach((m, i) => {
+      const [x0, y0] = m.from;
+      const [x1, y1] = m.to;
+      const len = Math.hypot(x1 - x0, y1 - y0);
+      // the tail points back along the direction of travel
+      const tx = n((-(x1 - x0) / len) * 64);
+      const ty = n((-(y1 - y0) / len) * 64);
+      const k = (d) => n(m.at + d);
+      this.defs.push(
+        `<linearGradient id="tail${i}" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="${tx}" y2="${ty}">` +
+          `<stop offset="0" stop-color="${scene.star}" stop-opacity="0.9"/>` +
+          `<stop offset="1" stop-color="${scene.star}" stop-opacity="0"/></linearGradient>`,
+      );
+      bg.push(
+        `<g opacity="0">` +
+          `<animate attributeName="opacity" values="0;0;1;1;0;0" ` +
+          `keyTimes="0;${k(0)};${k(0.03)};${k(0.08)};${k(0.11)};1" ` +
+          `dur="${m.dur}s" repeatCount="indefinite"/>` +
+          `<g>` +
+          `<animateTransform attributeName="transform" type="translate" ` +
+          `values="${n(x0)} ${n(y0)};${n(x0)} ${n(y0)};${n(x1)} ${n(y1)};${n(x1)} ${n(y1)}" ` +
+          `keyTimes="0;${k(0)};${k(0.11)};1" dur="${m.dur}s" repeatCount="indefinite"/>` +
+          `<line x1="0" y1="0" x2="${tx}" y2="${ty}" stroke="url(#tail${i})" stroke-width="1.5" stroke-linecap="round"/>` +
+          `<circle r="1.6" fill="${scene.star}"/>` +
+          `</g></g>`,
+      );
+    });
     return bg.join('\n');
   }
 
@@ -657,11 +673,7 @@ class Session {
 <style>
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 .cursor{animation:blink 1.06s steps(1) infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.float{animation:float 7s ease-in-out infinite}
-@keyframes mirror{0%,100%{opacity:1}50%{opacity:0.68}}
-.mirror{animation:mirror 7s ease-in-out infinite}
-@media (prefers-reduced-motion:reduce){.cursor,.float,.mirror{animation:none}}
+@media (prefers-reduced-motion:reduce){.cursor{animation:none}}
 text{white-space:pre;dominant-baseline:alphabetic}
 </style>
 <defs>
@@ -669,8 +681,7 @@ ${this.defs.join('\n')}
 </defs>
 ${sky}
 ${floor}
-<g class="mirror">${reflection}</g>
-<g class="float">
+${reflection}
 ${slab}
 <rect x="${OX}" y="${OY}" width="${WIN}" height="${winH}" rx="${R}" fill="${theme.bg}"/>
 <path d="M${OX} ${OY + R}a${R} ${R} 0 0 1 ${R} -${R}h${WIN - R * 2}a${R} ${R} 0 0 1 ${R} ${R}V${OY + CHROME}H${OX}Z" fill="${theme.chrome}"/>
@@ -681,7 +692,6 @@ ${this.parts.join('\n')}
 ${overlay}
 <rect x="${OX + 0.5}" y="${OY + 0.5}" width="${WIN - 1}" height="${winH - 1}" rx="${R}" fill="none" stroke="${theme.border}"/>
 <path d="M${OX + R} ${OY + 1}h${WIN - R * 2}" stroke="${theme.scene.edge}" stroke-opacity="0.75" stroke-width="1.4" fill="none"/>
-</g>
 </svg>
 `;
   }

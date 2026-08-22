@@ -3,11 +3,7 @@
 <style>
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 .cursor{animation:blink 1.06s steps(1) infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.float{animation:float 7s ease-in-out infinite}
-@keyframes mirror{0%,100%{opacity:1}50%{opacity:0.68}}
-.mirror{animation:mirror 7s ease-in-out infinite}
-@media (prefers-reduced-motion:reduce){.cursor,.float,.mirror{animation:none}}
+@media (prefers-reduced-motion:reduce){.cursor{animation:none}}
 text{white-space:pre;dominant-baseline:alphabetic}
 </style>
 <defs>
@@ -19,7 +15,9 @@ text{white-space:pre;dominant-baseline:alphabetic}
 <clipPath id="t5"><rect x="189" y="598.75" height="18" width="0"><animate attributeName="width" from="0" to="226.2" begin="7.23s" dur="0.81s" fill="freeze"/></rect></clipPath>
 <linearGradient id="sky" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#f4f7fc"/><stop offset="1" stop-color="#dbe3ef"/></linearGradient>
 <radialGradient id="bloom"><stop offset="0" stop-color="#7aa7e8" stop-opacity="0.35"/><stop offset="1" stop-color="#7aa7e8" stop-opacity="0"/></radialGradient>
-<linearGradient id="tail" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="-64" y2="-6"><stop offset="0" stop-color="#93a8c4" stop-opacity="0.9"/><stop offset="1" stop-color="#93a8c4" stop-opacity="0"/></linearGradient>
+<linearGradient id="tail0" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="-63.78" y2="-5.32"><stop offset="0" stop-color="#93a8c4" stop-opacity="0.9"/><stop offset="1" stop-color="#93a8c4" stop-opacity="0"/></linearGradient>
+<linearGradient id="tail1" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="63.72" y2="-5.96"><stop offset="0" stop-color="#93a8c4" stop-opacity="0.9"/><stop offset="1" stop-color="#93a8c4" stop-opacity="0"/></linearGradient>
+<linearGradient id="tail2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="-63.74" y2="-5.8"><stop offset="0" stop-color="#93a8c4" stop-opacity="0.9"/><stop offset="1" stop-color="#93a8c4" stop-opacity="0"/></linearGradient>
 <linearGradient id="floorFade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
 <mask id="floorMask"><rect x="0" y="765" width="916" height="104" fill="url(#floorFade)"/></mask>
 <radialGradient id="horizon"><stop offset="0" stop-color="#7aa7e8" stop-opacity="0.55"/><stop offset="1" stop-color="#7aa7e8" stop-opacity="0"/></radialGradient>
@@ -58,11 +56,12 @@ text{white-space:pre;dominant-baseline:alphabetic}
 <circle cx="643.7" cy="863.54" r="1.03" fill="#93a8c4" opacity="0.72"><animate attributeName="opacity" values="0.72;0.11;0.72" dur="3.36s" begin="2.99s" repeatCount="indefinite"/></circle>
 <circle cx="5.95" cy="686.46" r="1.51" fill="#93a8c4" opacity="0.26"><animate attributeName="opacity" values="0.26;0.04;0.26" dur="4.49s" begin="3.15s" repeatCount="indefinite"/></circle>
 <circle cx="712.7" cy="852.55" r="1.14" fill="#93a8c4" opacity="0.32"><animate attributeName="opacity" values="0.32;0.05;0.32" dur="3.15s" begin="2.81s" repeatCount="indefinite"/></circle>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6;0.63;0.68;0.71;1" dur="16s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="translate" values="256.48 8;256.48 8;567.92 34;567.92 34" keyTimes="0;0.6;0.71;1" dur="16s" repeatCount="indefinite"/><line x1="0" y1="0" x2="-64" y2="-6" stroke="url(#tail)" stroke-width="1.5" stroke-linecap="round"/><circle r="1.6" fill="#93a8c4"/></g></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6;0.63;0.68;0.71;1" dur="16s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="translate" values="256.48 8;256.48 8;567.92 34;567.92 34" keyTimes="0;0.6;0.71;1" dur="16s" repeatCount="indefinite"/><line x1="0" y1="0" x2="-63.78" y2="-5.32" stroke="url(#tail0)" stroke-width="1.5" stroke-linecap="round"/><circle r="1.6" fill="#93a8c4"/></g></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.22;0.25;0.3;0.33;1" dur="23s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="translate" values="751.12 6;751.12 6;494.64 30;494.64 30" keyTimes="0;0.22;0.33;1" dur="23s" repeatCount="indefinite"/><line x1="0" y1="0" x2="63.72" y2="-5.96" stroke="url(#tail1)" stroke-width="1.5" stroke-linecap="round"/><circle r="1.6" fill="#93a8c4"/></g></g>
+<g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.8;0.83;0.88;0.91;1" dur="29s" repeatCount="indefinite"/><g><animateTransform attributeName="transform" type="translate" values="54.96 18;54.96 18;274.8 38;274.8 38" keyTimes="0;0.8;0.91;1" dur="29s" repeatCount="indefinite"/><line x1="0" y1="0" x2="-63.74" y2="-5.8" stroke="url(#tail2)" stroke-width="1.5" stroke-linecap="round"/><circle r="1.6" fill="#93a8c4"/></g></g>
 <g mask="url(#floorMask)" opacity="0.65"><line x1="-74.99" y1="765" x2="-316" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="-15.77" y1="765" x2="-230" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="43.45" y1="765" x2="-144" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="102.67" y1="765" x2="-58" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="161.89" y1="765" x2="28" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="221.11" y1="765" x2="114" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="280.34" y1="765" x2="200" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="339.56" y1="765" x2="286" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="398.78" y1="765" x2="372" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="517.22" y1="765" x2="544" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="576.44" y1="765" x2="630" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="635.66" y1="765" x2="716" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="694.89" y1="765" x2="802" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="754.11" y1="765" x2="888" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="813.33" y1="765" x2="974" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="872.55" y1="765" x2="1060" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="931.77" y1="765" x2="1146" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="990.99" y1="765" x2="1232" y2="869" stroke="#7d9cc6" stroke-width="1"/><line x1="0" y1="770" x2="916" y2="770" stroke="#7d9cc6" stroke-width="1"/><line x1="0" y1="773.1" x2="916" y2="773.1" stroke="#7d9cc6" stroke-width="1"/><line x1="0" y1="778.12" x2="916" y2="778.12" stroke="#7d9cc6" stroke-width="1"/><line x1="0" y1="786.26" x2="916" y2="786.26" stroke="#7d9cc6" stroke-width="1"/><line x1="0" y1="799.44" x2="916" y2="799.44" stroke="#7d9cc6" stroke-width="1"/><line x1="0" y1="820.79" x2="916" y2="820.79" stroke="#7d9cc6" stroke-width="1"/><line x1="0" y1="855.38" x2="916" y2="855.38" stroke="#7d9cc6" stroke-width="1"/></g>
 <ellipse cx="458" cy="765" rx="459.2" ry="26" fill="url(#horizon)"/>
-<g class="mirror"><rect x="56" y="765" width="819" height="76" rx="12" fill="url(#mirror)"/></g>
-<g class="float">
+<rect x="56" y="765" width="819" height="76" rx="12" fill="url(#mirror)"/>
 <g filter="url(#drop)"><rect x="63" y="59" width="820" height="706" rx="12" fill="url(#side)"/><rect x="55.5" y="51.5" width="820" height="706" rx="12" fill="url(#side)"/></g>
 <rect x="48" y="44" width="820" height="706" rx="12" fill="#ffffff"/>
 <path d="M48 56a12 12 0 0 1 12 -12h796a12 12 0 0 1 12 12V80H48Z" fill="#f6f8fa"/>
@@ -173,5 +172,4 @@ text{white-space:pre;dominant-baseline:alphabetic}
 <g clip-path="url(#screen)"><rect x="48" y="44" width="820" height="706" fill="url(#scan)" opacity="0.05"/><rect x="48" y="44" width="820" height="706" fill="url(#vig)"/><rect x="48" y="44" width="820" height="706" fill="url(#glare)"/></g>
 <rect x="48.5" y="44.5" width="819" height="705" rx="12" fill="none" stroke="#d1d9e0"/>
 <path d="M60 45h796" stroke="#ffffff" stroke-opacity="0.75" stroke-width="1.4" fill="none"/>
-</g>
 </svg>
