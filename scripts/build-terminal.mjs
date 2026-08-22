@@ -35,6 +35,11 @@ const PROFILE = {
     ['tools', 'figma · git · node'],
     ['learning', 'ai · algorithms · systems'],
   ],
+  projects: [
+    ['dymmsa-web', 'quotations, orders & inventory for a URREA distributor'],
+    ['reels-analytics', 'self-hosted TikTok & IG Reels analytics + weekly digest'],
+    ['reelforge', 'ai pipeline for producing short-form video'],
+  ],
 };
 
 const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
@@ -501,6 +506,26 @@ class Session {
           `dur="${dur}s" begin="${begin}s" repeatCount="indefinite"/></circle>`,
       );
     }
+
+    // A meteor across the strip of sky above the window: a brief streak
+    // every 16 s, gone before it can touch the glass.
+    this.defs.push(
+      `<linearGradient id="tail" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="-64" y2="-6">` +
+        `<stop offset="0" stop-color="${scene.star}" stop-opacity="0.9"/>` +
+        `<stop offset="1" stop-color="${scene.star}" stop-opacity="0"/></linearGradient>`,
+    );
+    bg.push(
+      `<g opacity="0">` +
+        `<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.6;0.63;0.68;0.71;1" ` +
+        `dur="16s" repeatCount="indefinite"/>` +
+        `<g>` +
+        `<animateTransform attributeName="transform" type="translate" ` +
+        `values="${n(W * 0.28)} 8;${n(W * 0.28)} 8;${n(W * 0.62)} 34;${n(W * 0.62)} 34" ` +
+        `keyTimes="0;0.6;0.71;1" dur="16s" repeatCount="indefinite"/>` +
+        `<line x1="0" y1="0" x2="-64" y2="-6" stroke="url(#tail)" stroke-width="1.5" stroke-linecap="round"/>` +
+        `<circle r="1.6" fill="${scene.star}"/>` +
+        `</g></g>`,
+    );
     return bg.join('\n');
   }
 
@@ -632,7 +657,11 @@ class Session {
 <style>
 @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 .cursor{animation:blink 1.06s steps(1) infinite}
-@media (prefers-reduced-motion:reduce){.cursor{animation:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.float{animation:float 7s ease-in-out infinite}
+@keyframes mirror{0%,100%{opacity:1}50%{opacity:0.68}}
+.mirror{animation:mirror 7s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.cursor,.float,.mirror{animation:none}}
 text{white-space:pre;dominant-baseline:alphabetic}
 </style>
 <defs>
@@ -640,7 +669,8 @@ ${this.defs.join('\n')}
 </defs>
 ${sky}
 ${floor}
-${reflection}
+<g class="mirror">${reflection}</g>
+<g class="float">
 ${slab}
 <rect x="${OX}" y="${OY}" width="${WIN}" height="${winH}" rx="${R}" fill="${theme.bg}"/>
 <path d="M${OX} ${OY + R}a${R} ${R} 0 0 1 ${R} -${R}h${WIN - R * 2}a${R} ${R} 0 0 1 ${R} ${R}V${OY + CHROME}H${OX}Z" fill="${theme.chrome}"/>
@@ -651,6 +681,7 @@ ${this.parts.join('\n')}
 ${overlay}
 <rect x="${OX + 0.5}" y="${OY + 0.5}" width="${WIN - 1}" height="${winH - 1}" rx="${R}" fill="none" stroke="${theme.border}"/>
 <path d="M${OX + R} ${OY + 1}h${WIN - R * 2}" stroke="${theme.scene.edge}" stroke-opacity="0.75" stroke-width="1.4" fill="none"/>
+</g>
 </svg>
 `;
   }
@@ -678,6 +709,17 @@ function buildSVG(theme, data) {
   s.command('cat stack.yml');
   const padS = Math.max(...PROFILE.stack.map(([k]) => k.length));
   for (const [key, value] of PROFILE.stack) s.pair(key, value, padS);
+  s.blank();
+
+  s.command('ls ~/projects');
+  const padP = Math.max(...PROFILE.projects.map(([k]) => k.length)) + 1;
+  for (const [name, desc] of PROFILE.projects) {
+    s.out([
+      [`${name}/`, theme.blue],
+      [' '.repeat(padP - name.length + 2), theme.dim],
+      [desc, theme.dim],
+    ]);
+  }
   s.blank();
 
   s.command('gh contrib --summary').out([
